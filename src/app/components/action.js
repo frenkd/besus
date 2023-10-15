@@ -15,15 +15,9 @@ const Action = ({ action }) => {
                 .action {
                     border: 0px solid #e6e6e6;
                     margin-bottom: 20px;
-                    background-color: #ccc;
+                    background-color: #058417;
                     //rounded corners
                     border-radius: 3px;
-                }
-                .profilePic {
-                    width: 40px;
-                    height: 40px;
-                    border-radius: 50%;
-                    margin-right: 10px;
                 }
                 .actionImage img {
                     width: 100%;
