@@ -17,6 +17,18 @@ function ProfilePage(): JSX.Element {
   const router = useRouter();
   const auth = getAuth(firebase_app);
 
+  // reloads page if currentUser is updated
+  useEffect(() => {
+    auth.onAuthStateChanged((user) => {
+      if (user) {
+        console.log("User is signed in");
+        setUser(user.email || '');
+      } else {
+        console.log("User is not signed in");
+      }
+    });
+  }, [auth, auth.currentUser]);
+
   const generateDailySuggestion = async () => {
     const usr = auth.currentUser;
     if (usr && usr.email) {
