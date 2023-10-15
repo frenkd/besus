@@ -37,7 +37,7 @@ function ImagePostPage() {
 
                 await addDoc(collection(db, 'posts'), {
                     imageUrl,
-                    time: new Date(),
+                    time: new Date().toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true }),
                     user: currentUserEmail,
                     description: actionSuggestion
                 });
