@@ -4,7 +4,24 @@ Created by Frenk Dragar and Marek Miltner for TED AI Hackathon 2023
 
 We showcase BeSus, a social media platform that helps (not just) young people reduce their climate anxiety by giving them one clear action step each day to help the climate, while virtue signalling to their friends.
 
+<table>
+<tr>
+<th> Information </th>
+<th> Image </th>
+</tr>
+<tr>
+<td>
+
+![Besus Demo Image](besus-image.png "BeSus Demo Image")
+
+</td>
+<td>
+
 Everyone can take small steps towards improving their sustainability efforts, via getting personalized recommendations for actions that come at the perfect times of day and do not take much time or effort to pull off. In the end, the user takes a picture to show they have completed their BeSus today and helped improve the world just a little bit.
+
+</td>
+</tr>
+</table>
 
 ## Environment variables
 
