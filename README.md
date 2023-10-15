@@ -6,10 +6,6 @@ We showcase BeSus, a social media platform that helps (not just) young people re
 
 <table>
 <tr>
-<th> Information </th>
-<th> Image </th>
-</tr>
-<tr>
 <td>
 
 ![Besus Demo Image](besus-image.png "BeSus Demo Image")
