@@ -29,12 +29,16 @@ function ProfilePage(): JSX.Element {
     });
   }, [auth, auth.currentUser]);
 
-  const generateDailySuggestion = async () => {
+  const generateDailySuggestion = async (event: any) => {
     const usr = auth.currentUser;
+    event.preventDefault();
     if (usr && usr.email) {
       try {
-        const response = await axios.get(`https://generate-actions-ylu7vczw3a-uc.a.run.app?user=${usr.email}`);
-        console.log(response.data); // Handle the API response as required
+        // when response is received, router.push to the page with the suggestion
+        await axios.get(`https://generate-actions-ylu7vczw3a-uc.a.run.app?user=${usr.email}`).then((res) => {
+          console.log(res);
+          router.push('/');
+        });
       } catch (error) {
         console.error("Error generating daily suggestion: ", error);
       }
