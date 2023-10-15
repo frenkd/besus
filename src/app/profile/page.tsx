@@ -104,11 +104,10 @@ function ProfilePage(): JSX.Element {
             <label htmlFor="commute" className="block text-gray-700 text-sm font-bold mb-2">
               Commute Information
             </label>
-            <input
+            <textarea
               onChange={(e) => setCommute(e.target.value)}
               value={commute}
               required
-              type="text"
               name="commute"
               id="commute"
               placeholder="Enter commute info"
@@ -121,10 +120,9 @@ function ProfilePage(): JSX.Element {
             <label htmlFor="misc" className="block text-gray-700 text-sm font-bold mb-2">
               Miscellaneous Information
             </label>
-            <input
+            <textarea
               onChange={(e) => setMisc(e.target.value)}
               value={misc}
-              type="text"
               name="misc"
               id="misc"
               placeholder="Other details"
