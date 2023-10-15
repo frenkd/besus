@@ -4,11 +4,8 @@ import React from 'react';
 const Action = ({ action }) => {
     return (
         <div className="action">
-            <div className="actionImage">
-                <img src={action.image} alt={action.description} />
-            </div>
             <div className="actionDescription">
-                <p>{action.description}</p>
+                <p>{action?.description}</p>
             </div>
 
             <style jsx>{`
