@@ -38,7 +38,7 @@ function ImagePostPage() {
                 await addDoc(collection(db, 'posts'), {
                     imageUrl,
                     timestamp: new Date(),
-                    userEmail: currentUserEmail,
+                    user: currentUserEmail,
                     description: actionSuggestion
                 });
 
