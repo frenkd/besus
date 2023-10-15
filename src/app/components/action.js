@@ -13,9 +13,11 @@ const Action = ({ action }) => {
 
             <style jsx>{`
                 .action {
-                    border: 1px solid #e6e6e6;
+                    border: 0px solid #e6e6e6;
                     margin-bottom: 20px;
-                    background-color: #fff;
+                    background-color: #ccc;
+                    //rounded corners
+                    border-radius: 3px;
                 }
                 .profilePic {
                     width: 40px;

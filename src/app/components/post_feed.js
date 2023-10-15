@@ -10,7 +10,8 @@ const PostFeed = ({ posts }) => {
                 <Post
                     key={post.id}
                     profilePic={post.profilePic}
-                    username={post.username}
+                    user={post.user}
+                    time={post.time}
                     image={post.image}
                     description={post.description}
                 />

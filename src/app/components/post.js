@@ -1,12 +1,12 @@
 'use client';
 import React from 'react';
 
-const Post = ({ profilePic, username, image, description }) => {
+const Post = ({ profilePic, user, image, description, time }) => {
     return (
         <div className="post">
             <div className="postHeader">
-                <img src={profilePic} alt={username} className="profilePic" />
-                <p>{username}</p>
+                <img className='profilePic' src={image} alt={description} />
+                <p>{user} posted their sustainable action at {time}</p>
             </div>
             <div className="postImage">
                 <img src={image} alt={description} />
@@ -17,18 +17,22 @@ const Post = ({ profilePic, username, image, description }) => {
 
             <style jsx>{`
                 .post {
-                    border: 1px solid #e6e6e6;
+                    // rounded corners
+                    border-radius: 10px;
                     margin-bottom: 20px;
-                    background-color: #fff;
+                    background-color: #14532D;
                 }
                 .postHeader {
                     display: flex;
                     align-items: center;
                     padding: 10px;
+                    font-family: "Open Sans", sans-serif;
+                    font-size: 12px;
+                    color: #ccc;
                 }
                 .profilePic {
-                    width: 40px;
-                    height: 40px;
+                    width: 20px;
+                    height: 20px;
                     border-radius: 50%;
                     margin-right: 10px;
                 }
@@ -37,6 +41,7 @@ const Post = ({ profilePic, username, image, description }) => {
                 }
                 .postDescription {
                     padding: 10px;
+                    font-family: "Open Sans", sans-serif;
                 }
             `}</style>
         </div>

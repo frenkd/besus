@@ -32,7 +32,7 @@ export default function Home() {
   return (
     <div className="flex flex-col items-center justify-between w-full">
       <Navbar user={user} />
-      <main className="flex min-h-screen flex-col items-center justify-between p-24">
+      <main className="flex min-h-screen flex-col items-center justify-between p-4">
 
         <div className="mb-32 text-center lg:text-left flex flex-col">
           <div>
