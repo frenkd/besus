@@ -6,6 +6,7 @@ import { fetchPosts, fetchMostRecentAction } from '../firebase/firestore';
 import { useEffect, useState } from 'react';
 import Navbar from './components/navbar';
 import { getAuth, onAuthStateChanged } from "firebase/auth";
+import Link from 'next/link';
 
 
 function useCurrentUser() {
@@ -63,6 +64,7 @@ export default function Home() {
               <>
                 <h3 className="mb-2 text-2xl font-bold">Your action for today</h3>
                 <Action action={action} />
+                <Link href='/completed'><h5 className="mb-2 text-1xl font-bold">Completed your action? Submit your post here </h5></Link>
               </>
             ) : (
               <h3 className="mb-2 text-2xl font-bold">Login/Register to get your action!</h3>
