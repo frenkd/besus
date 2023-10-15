@@ -1,15 +1,15 @@
 'use client';
 import React from 'react';
 
-const Post = ({ profilePic, user, image, description, time }) => {
+const Post = ({ user, imageUrl, description, time }) => {
     return (
         <div className="post">
             <div className="postHeader">
-                <img className='profilePic' src={image} alt={description} />
+                <img className='profilePic' src={imageUrl} alt={description} />
                 <p>{user} posted their sustainable action at {time}</p>
             </div>
             <div className="postImage">
-                <img src={image} alt={description} />
+                <img src={imageUrl} alt={description} />
             </div>
             <div className="postDescription">
                 <p>{description}</p>
