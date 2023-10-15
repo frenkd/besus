@@ -11,6 +11,7 @@ function ProfilePage(): JSX.Element {
   const [commute, setCommute] = useState('');
   const [misc, setMisc] = useState('');
   const [age, setAge] = useState('');
+  const [user, setUser] = useState('');
   const router = useRouter();
 
   useEffect(() => {
@@ -27,6 +28,7 @@ function ProfilePage(): JSX.Element {
         setCommute(data.commute || '');
         setMisc(data.misc || '');
         setAge(data.age || '');
+        setUser(data.user || '');
       } else {
         console.log("No such document!");
       }
@@ -49,7 +51,8 @@ function ProfilePage(): JSX.Element {
       location,
       commute,
       misc,
-      age
+      age,
+      user
     });
 
     // Maybe redirect or give feedback to the user
