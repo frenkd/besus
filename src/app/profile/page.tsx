@@ -5,7 +5,6 @@ import { getFirestore, doc, setDoc, getDoc } from "firebase/firestore"; // impor
 import firebase_app from "@/firebase/config"; // Import firebase app
 import { useEffect } from "react";
 import { getAuth, signOut } from "firebase/auth";
-import axios from "axios";
 
 
 function ProfilePage(): JSX.Element {
@@ -28,22 +27,6 @@ function ProfilePage(): JSX.Element {
       }
     });
   }, [auth, auth.currentUser]);
-
-  const generateDailySuggestion = async (event: any) => {
-    const usr = auth.currentUser;
-    event.preventDefault();
-    if (usr && usr.email) {
-      try {
-        // when response is received, router.push to the page with the suggestion
-        await axios.get(`https://generate-actions-ylu7vczw3a-uc.a.run.app?user=${usr.email}`).then((res) => {
-          console.log(res);
-          router.push('/');
-        });
-      } catch (error) {
-        console.error("Error generating daily suggestion: ", error);
-      }
-    }
-  }
 
   const handleSignOut = () => {
     signOut(auth)
@@ -189,12 +172,6 @@ function ProfilePage(): JSX.Element {
             className="w-full bg-red-500 mt-4 text-white font-semibold py-2 rounded"
           >
             Sign Out
-          </button>
-          <button
-            onClick={generateDailySuggestion}
-            className="w-full bg-green-500 mt-4 text-white font-semibold py-2 rounded"
-          >
-            Give Daily Suggestion
           </button>
         </form>
       </div>
